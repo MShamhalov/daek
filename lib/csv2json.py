@@ -11,17 +11,21 @@ def csv2json(sourceFile, resultFile, tableName, separator):
             i += 1
         else:
             tableBody = readString.split(separator)
-            j = 0;
+            j = 0
             resultFileDescriptor.write("{")
             for currentElem in tableHead:
                 currentElem = currentElem.replace('\n', '')
                 tableBody[j] = tableBody[j].replace('\n', '')
                 resultFileDescriptor.write('"' + currentElem + '": ')
+                #resultFileDescriptor.write(tableBody[j])
                 if tableBody[j].isdigit():
+                    resultFileDescriptor.write(tableBody[j])
+                elif tableBody[j] == 'true' or tableBody[j] == 'false':
                     resultFileDescriptor.write(tableBody[j])
                 elif tableBody[j] == '':
                     resultFileDescriptor.write('null')
                 else: resultFileDescriptor.write('"' + tableBody[j] + '"')
+                
                 if (currentElem != tableHead[-1]):
                     resultFileDescriptor.write(",")
                 j += 1
