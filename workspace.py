@@ -1,6 +1,7 @@
-def executor(command): 
+def executor(command):
+    #from conf import getModules
+    #modules = getModules()  
     parameter = command.split(' ')
-
     if parameter[0] == 'csv2json':
         if len(parameter) == 5:
             from csv2json import csv2json
@@ -17,7 +18,7 @@ def executor(command):
             from json2csv import json2csvHelp
             json2csvHelp()
     
-    elif parameter[0] == 'jsonax': # Разрезаем JSON на указанное количество записей  
+    elif parameter[0] == 'jsonax': 
         if len(parameter) == 3:
             from jsonax import jsonax
             jsonax(parameter[1], parameter[2], parameter[3])
@@ -29,5 +30,3 @@ def executor(command):
 
     elif parameter[0] == '':
         print('Don\'t know what to do')
-
-    else: print ('bad command')

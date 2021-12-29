@@ -31,4 +31,4 @@ def csv2json(sourceFile, resultFile, tableName, separator):
 
 def csv2jsonHelp():
     print ("Syntax error: Source file (csv); Destination file (json); Table name; Separator")
-    print ("Ex: csv2json D:\vrm\task\itsm_incident_task.csv D:\vrm\task\ready_task.json itsm_incident_task ;")
+    print ("Ex: csv2json D:\\vrm\\task\\itsm_incident_task.csv D:\\vrm\\task\\ready_task.json itsm_incident_task ;")
