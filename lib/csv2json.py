@@ -15,7 +15,6 @@ def csv2json(sourceFile, resultFile, tableName, separator):
             resultFileDescriptor.write("{")
             for currentElem in tableHead:
                 currentElem = currentElem.replace('\n', '')
-                #currentElem.decode('utf-8-sig')
                 tableBody[j] = tableBody[j].replace('\n', '')
                 resultFileDescriptor.write('"' + currentElem + '": ')
                 if tableBody[j].isdigit():
