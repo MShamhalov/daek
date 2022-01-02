@@ -27,9 +27,9 @@ def executor(command):
             jsonaxHelp()
 
     elif parameter[0] == 'jsoneyelike': 
-        if len(parameter) == 3:
+        if len(parameter) == 2:
             from jsoneyelike import jsoneyelike
-            jsoneyelike(parameter[1], parameter[2])
+            jsoneyelike(parameter[1])
         else:
             from jsoneyelike import jsoneyelikeHelp
             jsoneyelikeHelp()
