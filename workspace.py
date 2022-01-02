@@ -19,14 +19,20 @@ def executor(command):
             json2csvHelp()
     
     elif parameter[0] == 'jsonax': 
-        if len(parameter) == 3:
+        if len(parameter) == 4:
             from jsonax import jsonax
             jsonax(parameter[1], parameter[2], parameter[3])
         else:
             from jsonax import jsonaxHelp
             jsonaxHelp()
 
-
+    elif parameter[0] == 'jsoneyelike': 
+        if len(parameter) == 3:
+            from jsoneyelike import jsoneyelike
+            jsoneyelike(parameter[1], parameter[2])
+        else:
+            from jsoneyelike import jsoneyelikeHelp
+            jsoneyelikeHelp()
 
     elif parameter[0] == '':
         print('Don\'t know what to do')
