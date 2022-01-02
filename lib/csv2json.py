@@ -34,4 +34,5 @@ def csv2json(sourceFile, resultFile, tableName, separator):
 
 def csv2jsonHelp():
     print ("Syntax error: Source file (csv); Destination file (json); Table name; Separator")
+    print ("note: The incoming file must be in utf-8 with bom format! (Ms Excel utf-8 export file)")
     print ("Ex: csv2json D:\\vrm\\task\\itsm_incident_task.csv D:\\vrm\\task\\ready_task.json itsm_incident_task ;")
