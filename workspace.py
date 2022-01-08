@@ -34,5 +34,13 @@ def executor(command):
             from jsoneyelike import jsoneyelikeHelp
             jsoneyelikeHelp()
 
+    elif parameter[0] == 'vcs2code': 
+        if len(parameter) == 3:
+            from vcs2code import vcs2code
+            vcs2code(parameter[1], parameter[2])
+        else:
+            from vcs2code import vcs2codeHelp
+            vcs2codeHelp()
+
     elif parameter[0] == '':
         print('Don\'t know what to do')
